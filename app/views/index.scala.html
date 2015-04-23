@@ -1,0 +1,28 @@
+@(message: String)
+
+@main("Welcome to Play") {
+
+    <div class="jumbotron">
+        <h1>Betfect - Test</h1>
+        <p>Joris Pichard</p>
+        <p>
+            <button type="button" id="btnCSV" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+                Go !
+            </button>
+
+        </p>
+    </div>
+
+    <div class="alert alert-success" role="alert" id="result"></div>
+
+
+
+    <script src="@routes.Assets.at("javascripts/lib/jquery-min.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("bootstrap/js/bootstrap.min.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/request.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        (function() {
+        	Request.load();
+        })();
+    </script>
+}
